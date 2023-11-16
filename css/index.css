@@ -35,32 +35,56 @@ button {
 
 .header {
     background-color: #6725A8;
-    padding: 9px 3px 32px 24px;
-    box-sizing: border-box;
-    width: 100%;
+    padding-bottom: 30px;
 }
 
 .header__container {
     max-width: 1400px;
     margin: 0 auto;
-    position: relative;
-    z-index: 1;
+    padding: 0px 23px 0px 24px;
 }
+
+.header__content {
+    display: flex;
+    align-items: center;
+}
+
+/* -----------Навигация--------- */
 
 .header__nav {
     display: flex;
+    align-items: center;
+    padding-top: 7px;
 }
 
-.header__burger-icon {
+.header__burger-button {
+    position: relative;
     width: 48px;
     height: 48px;
-    margin-top: 11px;
-    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid #FFFFFF73;
+    margin: 1px 17px 0 0;
 }
 
-.header__search-icon-img {
-    width: 24px;
-    height: 24px;
+.header__burger-button::before,
+.header__burger-button::after {
+    content: '';
+    left: 9px;
+    position: absolute;
+    display: block;
+    width: 28px;
+    height: 4px;
+    border-radius: 10px;
+    background: #FFFFFF;
+}
+
+.header__burger-button::before {
+    top: 11px;
+    box-shadow: 0 10px 0 #FFFFFF;
+}
+
+.header__burger-button::after {
+    bottom: 11px;
 }
 
 .header__title {
@@ -68,31 +92,45 @@ button {
     font-weight: 600;
     line-height: 1.5rem;
     color: #fff;
-    margin: 12px 0px 0px 17px;
     letter-spacing: 0.15rem;
     cursor: pointer;
 }
 
 .header__title_size {
-    width: 6.62rem;
+    width: 107px;
+    padding-top: 3px;
+    letter-spacing: 2.5px;
 }
 
-.header__search {
-    margin: 11px 0px 0px 30px;
+/* -----------Поиск--------- */
+
+.header__search-wrapper {
+    flex-grow: 1;
+    position: relative;
+    margin: 0 32px 0 30px;
+    padding-top: 8px;
+}
+
+.header__search-icon-img {
+    width: 24px;
+    height: 24px;
+}
+
+.header__search-block {
+    display: flex;
     position: relative;
 }
 
 .header__search-input {
     height: 48px;
-    width: 970px;
-    padding: 0 0px 4px 21px;
-    box-sizing: border-box;
+    padding: 0px 0px 5px 20px;
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
     border: none;
     border-radius: 36px;
     background-color: #FFFFFF33;
+    flex-grow: 1;
 }
 
 .header__search-input::placeholder {
@@ -103,37 +141,53 @@ button {
     letter-spacing: 0px;
     text-align: left;
     color: #FFFFFF;
+    opacity: 50%;
 }
-
 
 .header__search-icon {
     position: absolute;
-    top: 45%;
-    right: 19px;
+    top: 56%;
+    right: 20px;
     transform: translateY(-50%);
     cursor: pointer;
 }
 
+/* -----------Профиль и корзина--------- */
+
 .header__user-actions {
     display: flex;
+    padding-top: 19px;
+}
+
+.header__basket {
+    margin-left: 43px;
+}
+
+.profile__link,
+.basket__link {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
-.header__profile {
-    margin: 5px 0px 0px 33px;
+
+.profile__img {
+    padding: 2px 0 0 3px;
 }
 
-.header__profile-img {
-    width: 3.5rem;
-    height: 3.5rem;
-    cursor: pointer;
+.basket__img {
+    padding-right: 6px;
 }
 
-.header__cart {
-    margin: 0px 0px 0px 40px;
+.profile__text {
+    font-size: 14px;
+    line-height: 37px;
+    color: #FFFFFF;
+    letter-spacing: -0.035em;
 }
 
-.header__cart-img {
-    width: 3.5rem;
-    height: 4rem;
-    cursor: pointer;
+.basket__text {
+    font-size: 14px;
+    line-height: 35px;
+    color: #FFFFFF;
+    letter-spacing: -0.035em;
 }
