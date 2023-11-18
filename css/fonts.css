@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'Segoe-UI-700';
+    src: url('../assets/fonts/Segoe-UI -Bold.eot');
+    src: local('Segoe UI Bold'), local('SegoeUI-Bold'),
+        url('../assets/fonts/Segoe-UI -Bold.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/Segoe-UI -Bold.woff2') format('woff2'),
+        url('../assets/fonts/Segoe-UI -Bold.woff') format('woff'),
+        url('../assets/fonts/Segoe-UI -Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe-UI-600';
+    src: url('../assets/fonts/Segoe-UI -SemiBold.eot');
+    src: local('Segoe UI Semibold'), local('SegoeUI-SemiBold'),
+        url('../assets/fonts/Segoe-UI -SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/Segoe-UI -SemiBold.woff2') format('woff2'),
+        url('../assets/fonts/Segoe-UI -SemiBold.woff') format('woff'),
+        url('../assets/fonts/Segoe-UI -SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe-UI-400';
+    src: url('../assets/fonts/Segoe-UI .eot');
+    src: local('Segoe UI'), local('SegoeUI'),
+        url('../assets/fonts/Segoe-UI .eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/Segoe-UI .woff2') format('woff2'),
+        url('../assets/fonts/Segoe-UI .woff') format('woff'),
+        url('../assets/fonts/Segoe-UI .ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Segoe-UI-400', sans-serif;
+    text-align: left;
+    color: #000000;
+}
+
+h1 {
+    font-family: 'Segoe-UI-700', sans-serif;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -0.01em;
+}
+
+h2 {
+    font-family: 'Segoe-UI-700', sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.01em;
+}
+
+h3 {
+    font-family: 'Segoe-UI-600', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0px;
+}
+
+h4 {
+    font-family: 'Segoe-UI-400', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0px;
+}
+
+p,
+span {
+    font-size: 13px;
+    line-height: 16px;
+}

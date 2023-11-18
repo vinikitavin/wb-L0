@@ -1,41 +1,15 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-body {
-    width: 100%;
-    height: 100vh;
-    overflow-x: hidden;
-    background-color: #fafbfb;
-}
-
-ul li {
-    list-style-type: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-button {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
+@import url(./reset.css);
+@import url(./fonts.css);
 
 .header {
     background-color: #6725A8;
     padding-bottom: 30px;
+}
+
+@media (max-width: 660px) and (min-width: 320px) {
+    .header {
+        padding: 8px 0 34px 0;
+    }
 }
 
 .header__container {
@@ -44,9 +18,21 @@ button {
     padding: 0px 23px 0px 24px;
 }
 
+@media (max-width: 660px) and (min-width: 320px) {
+    .header__container {
+        padding: 0px 15px 0px 7px;
+    }
+}
+
 .header__content {
     display: flex;
     align-items: center;
+}
+
+@media (max-width: 660px) and (min-width: 320px) {
+    .header__content {
+        justify-content: space-between;
+    }
 }
 
 /* -----------Навигация--------- */
@@ -55,6 +41,15 @@ button {
     display: flex;
     align-items: center;
     padding-top: 7px;
+}
+
+@media (max-width: 660px) and (min-width: 320px) {
+    .header__nav {
+        display: flex;
+        align-items: center;
+        padding-top: 0;
+        margin-right: 5px;
+    }
 }
 
 .header__burger-button {
@@ -87,33 +82,90 @@ button {
     bottom: 11px;
 }
 
-.header__title {
-    font-size: 1.3rem;
-    font-weight: 600;
-    line-height: 1.5rem;
-    color: #fff;
-    letter-spacing: 0.15rem;
-    cursor: pointer;
+@media (max-width: 660px) and (min-width: 320px) {
+    .header__burger-button {
+        width: 28px;
+        height: 28px;
+        border: none;
+        margin: 0;
+    }
+
+    .header__burger-button::before,
+    .header__burger-button::after {
+        content: '';
+        left: 9px;
+        position: absolute;
+        display: block;
+        height: 2px;
+        border-radius: 10px;
+        background: #FFFFFF;
+    }
+
+    .header__burger-button::before {
+        width: 22px;
+        top: 7px;
+        box-shadow: 0 8px 0 #FFFFFF;
+    }
+
+    .header__burger-button::after {
+        width: 16px;
+        bottom: 3px;
+    }
 }
 
-.header__title_size {
+@media (max-width: 660px) and (min-width: 320px) {
+    .header__title {
+        padding-top: 1px;
+    }
+}
+
+.header__text {
+    display: block;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.09em;
+    color: #fff;
     width: 107px;
-    padding-top: 3px;
-    letter-spacing: 2.5px;
+    padding-top: 9px;
+}
+
+@media (max-width: 660px) and (min-width: 320px) {
+    .header__text {
+        width: 100%;
+        font-size: 18px;
+        padding: 0;
+        word-spacing: 0.07em;
+        letter-spacing: 0.186em;
+    }
 }
 
 /* -----------Поиск--------- */
 
-.header__search-wrapper {
+.header__search-wrapper-pc {
     flex-grow: 1;
     position: relative;
     margin: 0 32px 0 30px;
     padding-top: 8px;
 }
 
+@media (max-width: 660px) and (min-width: 320px) {
+    .header__search-wrapper-pc {
+        display: none;
+    }
+}
+
 .header__search-icon-img {
     width: 24px;
     height: 24px;
+}
+
+@media (max-width: 660px) and (min-width: 320px) {
+    .header__search-icon-img {
+        width: 22px;
+        height: 22px;
+        cursor: pointer;
+    }
 }
 
 .header__search-block {
@@ -123,10 +175,8 @@ button {
 
 .header__search-input {
     height: 48px;
-    padding: 0px 0px 5px 20px;
+    padding-left: 20px;
     font-size: 18px;
-    font-weight: 400;
-    line-height: 24px;
     border: none;
     border-radius: 36px;
     background-color: #FFFFFF33;
@@ -134,14 +184,18 @@ button {
 }
 
 .header__search-input::placeholder {
-    font-family: Segoe UI;
+    font-family: 'Segoe-UI-400';
     font-size: 18px;
-    font-weight: 400;
     line-height: 24px;
     letter-spacing: 0px;
-    text-align: left;
     color: #FFFFFF;
     opacity: 50%;
+}
+
+@media (max-width: 660px) and (min-width: 320px) {
+    .header__search-input {
+        display: none;
+    }
 }
 
 .header__search-icon {
@@ -152,11 +206,34 @@ button {
     cursor: pointer;
 }
 
+@media (max-width: 660px) and (min-width: 320px) {
+    .header__search-icon {
+        position: relative;
+    }
+}
+
+.header__search-wrapper-mobile {
+    display: none;
+}
+
+@media (max-width: 660px) and (min-width: 320px) {
+    .header__search-wrapper-mobile {
+        display: block;
+        padding-top: 9px;
+    }
+}
+
 /* -----------Профиль и корзина--------- */
 
 .header__user-actions {
     display: flex;
     padding-top: 19px;
+}
+
+@media (max-width: 660px) and (min-width: 320px) {
+    .header__user-actions {
+        display: none
+    }
 }
 
 .header__basket {
