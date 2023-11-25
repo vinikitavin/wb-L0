@@ -63,7 +63,7 @@
                         </div>
                         <ul class="goods__list">
                             <div class="goods__card card">
-                                <div class="card__content">
+                                <div class="first-card card__content">
                                     <div class="card__input-img">
                                         <div class="card__input-wrapper">
                                             <input id="card-1-checkbox" class="card__input" type="checkbox">
@@ -108,7 +108,7 @@
                                 </div>
                             </div>
                             <div class="goods__card card">
-                                <div class="card__content">
+                                <div class="second-card card__content">
                                     <div class="card__input-img">
                                         <div class="card__input-wrapper">
                                             <input id="card-2-checkbox" class="card__input" type="checkbox">
@@ -154,7 +154,7 @@
                                 </div>
                             </div>
                             <div class="goods__card card">
-                                <div class="card__content">
+                                <div class="third-card card__content">
                                     <div class="card__input-img">
                                         <div class="card__input-wrapper">
                                             <input id="card-3-checkbox" class="card__input" type="checkbox">
@@ -200,14 +200,14 @@
                         </ul>
                     </section>
                     <section class="main__absent absent">
-                        <div class="goods__manipulates">
+                        <div class="absent__manipulates">
                             <h3 class="absent__header">Отсутствуют · 3 товара</h3>
                             <button class="goods__hide" type="button">
                                 <img class="goods__check-mark" src="./assets/images/check-mark.svg" alt="галочка">
                             </button>
                         </div>
                         <ul class="absent__list">
-                            <div class="goods__card card">
+                            <div class="absent__card card">
                                 <div class="card__content">
                                     <div class="card__input-img">
                                         <div class="card__input-wrapper">
@@ -231,7 +231,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="goods__card card">
+                            <div class="absent__card card">
                                 <div class="card__content">
                                     <div class="card__input-img">
                                         <div class="card__input-wrapper">
@@ -257,7 +257,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="goods__card card">
+                            <div class="absent__card card">
                                 <div class="card__content">
                                     <div class="card__input-img">
                                         <div class="card__input-wrapper">
@@ -335,7 +335,7 @@
                             <div class="payment__bank-card">
                                 <img class="payment__mir" src="./assets/images/mir-icon.svg" alt="Иконка МИР">
                                 <h4 class="payment__card-num">1234 56•• •••• 1234</h4>
-                                <h4>01/30</h4>
+                                <h4 class="payment__card-date">01/30</h4>
                             </div>
                             <p class="payment__warning">Спишем оплату с карты при получении</p>
                         </div>
@@ -345,37 +345,103 @@
                             <h2 class="recipient__head">Получатель</h4>
                                 <div class="recipient__fio">
                                     <div class="recipient__name-wrapper">
-                                        <input id="name" class="recipient__name recipient-input" placeholder="Имя" type="text">
-                                        <p class="recipient__name-error recipient__error">Укажите имя</p>
+                                        <input id="name" class="recipient__name recipient-input" placeholder="Имя"
+                                            type="text">
+                                        <p class="recipient__name-error recipient__error error-active">Укажите имя</p>
                                     </div>
                                     <div class="recipient__surname-wrapper">
-                                        <input id="surname" class="recipient__surname recipient-input" placeholder="Фамилия" type="text">
-                                        <p class="recipient__surname-error recipient__error">Введите фамилию</p>
+                                        <input id="surname" class="recipient__surname recipient-input"
+                                            placeholder="Фамилия" type="text">
+                                        <p class="recipient__surname-error recipient__error error-active">Введите фамилию</p>
                                     </div>
                                 </div>
                                 <div class="recipient__data">
                                     <div class="recipient__mail-wrapper">
-                                        <input id="mail" class="recipient__mail recipient-input" placeholder="Почта" type="text">
-                                        <p class="recipient__mail-error recipient__error">Проверьте адрес электронной почты</p>
+                                        <input id="mail" class="recipient__mail recipient-input" placeholder="Почта"
+                                            type="text">
+                                        <p class="recipient__mail-error recipient__error error-active">Проверьте адрес электронной
+                                            почты</p>
                                     </div>
                                     <div class="recipient__phone-wrapper">
-                                        <input id="phone" class="recipient__phone recipient-input" placeholder="Телефон" type="text">
-                                        <p class="recipient__phone-error recipient__error">Формат: +9 999 999 99 99</p>
+                                        <label class="recipient__phone-label" for="phone">Телефон</label>
+                                        <input id="phone" class="recipient__phone recipient-input" placeholder="Телефон"
+                                            type="text">
+                                        <p class="recipient__phone-error recipient__error error-active">Формат: +9 999 999 99 99</p>
                                     </div>
-                                    <div class="recipient__phone-wrapper">
-                                        <input id="inn" class="recipient__inn recipient-input" placeholder="ИНН" type="text">
-                                        <p class="recipient__mail-inn recipient__error">Для таможенного оформления</p>
-                                        <!-- <p class="recipient__mail-inn recipient__error">Проверьте ИНН</p> -->
+                                    <div class="recipient__inn-wrapper">
+                                        <input id="inn" class="recipient__inn recipient-input" placeholder="ИНН"
+                                            type="text">
+                                        <p class="recipient__inn-mess">Для таможенного оформления</p>
+                                        <p class="recipient__inn-error recipient__error error-active">Проверьте ИНН</p>
                                     </div>
                                 </div>
                         </div>
                     </section>
                 </section>
-                <section class="main__total"></section>
+                <section class="main__total total">
+                    <div class="total__content">
+                        <div class="total__main">
+                            <h2 class="total__header">Итого</h2>
+                            <h2 class="total__sum">2 101 063 сом</h2>
+                        </div>
+                        <div class="total__properties">
+                            <div class="total__quantity">
+                                <h4 class="total__quantity-key">203 товара</h4>
+                                <h4 class="total__quantity-value">2 302 048 сом</h4>
+                            </div>
+                            <div class="total__discount">
+                                <h4 class="total__discount-key">Скидка</h4>
+                                <h4 class="total__discount-value">−200 985 сом</h4>
+                            </div>
+                            <div class="total__delivery">
+                                <h4 class="total__delivery-key">Доставка</h4>
+                                <h4 class="total__delivery-value">Бесплатно</h4>
+                            </div>
+                        </div>
+                        <div class="total__delivery-info delivery-info">
+                            <div class="delivery-info__head">
+                                <h4 class="delivery-info__title">Доставка в пункт выдачи</h4>
+                                <img class="delivery-info__change-icon" src="./assets/images/change.svg"
+                                    alt="Иконка редактирования">
+                            </div>
+                            <p class="delivery-info__point">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+                            <p class="delivery-info__date">5–8 фев</p>
+                            <div class="delivery-info__reverse">
+                                <img class="delivery-info__reverse-img reverse__img"
+                                    src="./assets/images/approved-icon.svg" alt="Иконка бесплатного возврата">
+                                <p class="delivery-info__reverse-text1">Обратная доставка товаров на склад при
+                                    отказе —<span class="reverse__text2">бесплатно</span></p>
+                            </div>
+                            <div class="delivery-info__payment">
+                                <h4 class="delivery-info__payment-title">Оплата картой</h4>
+                                <img class="delivery-info__change-icon" src="./assets/images/change.svg"
+                                    alt="Иконка редактирования">
+                            </div>
+                            <div class="delivery-info__bank-card">
+                                <img class="payment__mir" src="./assets/images/mir-icon.svg" alt="Иконка МИР">
+                                <p class="payment__card-num-total">1234 56•• •••• 1234</p>
+                            </div>
+                            <div class="payment__write-off">
+                                <input id="payment-checkbox" class="card__input" type="checkbox">
+                                <label for="payment-checkbox" class="payment__label card__label">Списать оплату
+                                    сразу</label>
+                                <p>Спишем оплату с карты при получении</p>
+                            </div>
+                            <div class="order">
+                                <button class="order__btn">Заказать</button>
+                                <div class="order-agreement__wrapper">
+                                    <img class="order-agreement__icon" src="./assets/images/agreement-icon.svg" alt="Галочка согласия">
+                                    <p>Соглашаюсь <a href="" class="order-agreement__link">с правилами пользования торговой площадкой</a> и <a
+                                        href="" class="order-agreement__link">возврата</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </main>
         <footer class="footer">
-            <p class="footer__text">© 2022  ООО «Товары и точка»</p>
+            <p class="footer__text">© 2022 ООО «Товары и точка»</p>
         </footer>
     </div>
 </body>
