@@ -291,6 +291,12 @@
     margin: 0 auto;
 }
 
+@media (max-width: 1399px) and (min-width: 1020px) {
+    .main__container {
+        width: 976px;
+    }
+}
+
 .main__basket {
     margin-top: 25px;
 }
@@ -299,7 +305,12 @@
 @media screen and (min-width: 1400px) {
     .main__basket {
         width: 891px;
-        margin-top: 25px;
+    }
+}
+
+@media (max-width: 1399px) and (min-width: 1020px) {
+    .main__basket {
+        max-width: 640px;
     }
 }
 
@@ -321,6 +332,12 @@
 
 .goods__hide {
     padding: 2px 2px 0 0;
+}
+
+@media (max-width: 1399px) and (min-width: 1020px) {
+    .goods__hide {
+        padding: 4px 1px 0 0;
+    }
 }
 
 .goods__list {
@@ -528,6 +545,12 @@
     margin-bottom: 42px;
 }
 
+@media (max-width: 1399px) and (min-width: 1020px) {
+    .absent__card {
+        max-width: 512px;
+    }
+}
+
 .absent__manipulates {
     display: flex;
     justify-content: space-between;
@@ -555,6 +578,20 @@
     background: #FFFFFF;
 }
 
+@media (max-width: 1399px) and (min-width: 1020px) {
+    .delivery {
+        padding: 15px 26px 24px 24px;
+    }
+
+    .payment {
+        padding: 17px 26px 24px 24px;
+    }
+
+    .recipient {
+        padding: 16px 24px 24px 23px;
+    }
+}
+
 .delivery__head,
 .payment__head {
     display: flex;
@@ -567,7 +604,8 @@
     letter-spacing: 0.7px;
     color: #CB11AB;
     margin-top: 7px;
-    cursor: pointer;;
+    cursor: pointer;
+    ;
 }
 
 .delivery__main {
@@ -653,6 +691,12 @@
     border-bottom: 1px dashed #0CB477;
 }
 
+@media (max-width: 1399px) and (min-width: 1020px) {
+    .reverse__text2 {
+        margin-left: 2px;
+    }
+}
+
 .payment__bank-card {
     display: flex;
     align-items: center;
@@ -684,10 +728,6 @@
     margin-bottom: 26px;
 }
 
-.recipient-wrapper {
-    width: 700px;
-}
-
 .recipient__head {
     margin-bottom: 26px;
 }
@@ -695,6 +735,12 @@
 .recipient-wrapper {
     flex-direction: column;
     width: 700px;
+}
+
+@media (max-width: 1399px) and (min-width: 1020px) {
+    .recipient-wrapper {
+        width: 592px;
+    }
 }
 
 .recipient__fio,
@@ -768,10 +814,22 @@
     margin-top: 13px;
 }
 
+@media (max-width: 1399px) and (min-width: 1020px) {
+    .total {
+        width: 304px;
+    }
+}
+
 .total__content {
-    padding: 17px 24px 24px;
+    padding: 17px 24px 24px 24px;
     background: #FFFFFF;
     border-radius: 16px;
+}
+
+@media (max-width: 1399px) and (min-width: 1020px) {
+    .total__content {
+        padding: 17px 25px 24px 24px;
+    }
 }
 
 .total__main {
