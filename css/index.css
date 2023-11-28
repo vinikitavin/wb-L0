@@ -1265,8 +1265,39 @@
     letter-spacing: -0.6px;
 }
 
-.error-active {
+.recipient__name-error {
     display: none;
+}
+
+.recipient__surname-error {
+    display: none;
+}
+
+.recipient__mail-error {
+    display: none;
+}
+
+.recipient__mail-less-error {
+    display: none;
+}
+
+.recipient__phone-error {
+    display: none;
+}
+
+.recipient__phone-less-error {
+    display: none;
+}
+
+.recipient__inn-error {
+    display: none;
+}
+
+.recipient__inn-less-error {
+    display: none;
+}
+
+.error-active {
     position: absolute;
 }
 

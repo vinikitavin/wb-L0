@@ -187,5 +187,124 @@ hideAbsentButton.addEventListener('click', function () {
     hideAbsentButton.classList.toggle('rotated');
 });
 
+const orderButton = document.getElementById('order');
+
+orderButton.addEventListener('click', function () {
+    const nameInput = document.getElementById('name');
+    const surnameInput = document.getElementById('surname');
+    const mailInput = document.getElementById('mail');
+    const phoneInput = document.getElementById('phone');
+    const innInput = document.getElementById('inn');
+
+    const nameError = document.querySelector('.recipient__name-error');
+    const surnameError = document.querySelector('.recipient__surname-error');
+    const mailError = document.querySelector('.recipient__mail-error');
+    const mailLess = document.querySelector('.recipient__mail-less-error');
+    const phoneError = document.querySelector('.recipient__phone-error');
+    const phoneLess = document.querySelector('.recipient__phone-less-error');
+    const innError = document.querySelector('.recipient__inn-error');
+    const innLess = document.querySelector('.recipient__inn-less-error');
+    const innDesc = document.querySelector('.recipient__inn-mess');
+
+    const recipientBlock = document.getElementById('recipient')
+
+    function validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    function validatePhoneNumber(phoneNumber) {
+        const phoneRegex = /^\+\d{1,3}\s\d{3}\s\d{3}\s\d{2}\s\d{2}$/;
+        return phoneRegex.test(phoneNumber);
+    }
+
+    let isValid = true;
+
+    // Валидация имени
+
+    if (!nameInput.value.trim()) {
+        nameError.style.display = 'block';
+        isValid = false;
+    } else {
+        nameError.style.display = 'none';
+        isValid = true;
+
+    }
+
+    // Валидация фамилии
+
+    if (!surnameInput.value.trim()) {
+        surnameError.style.display = 'block';
+        isValid = false;
+    } else {
+        surnameError.style.display = 'none';
+        isValid = true;
+    }
+
+    // Валидация почты
+
+    if (!mailInput.value.trim()) {
+        mailLess.style.display = 'block';
+        isValid = false;
+    } else {
+        mailLess.style.display = 'none';
+        isValid = true;
+    }
+
+    if (mailInput.value.trim() && !validateEmail(mailInput.value.trim())) {
+        mailError.style.display = 'block';
+        isValid = false;
+    } else {
+        mailError.style.display = 'none';
+        isValid = true;
+    }
+
+    // Валидация телефона
+
+    if (!phoneInput.value.trim()) {
+        phoneLess.style.display = 'block';
+        isValid = false;
+    } else {
+        phoneLess.style.display = 'none';
+    }
+
+    if (phoneInput.value.trim() && !validatePhoneNumber(phoneInput.value.trim())) {
+        phoneError.style.display = 'block';
+        isValid = false;
+    } else {
+        phoneError.style.display = 'none';
+        isValid = true;
+    }
+
+    // Валидация ИНН
+
+    if (innInput.value.trim().length === 0) {
+        console.log('Пустое')
+        innLess.style.display = 'block';
+        innError.style.display = 'none';
+        innDesc.style.display = 'none'
+        isValid = false;
+    } else if (innInput.value.trim().length !== 0 && innInput.value.trim().length < 14) {
+        console.log('Меньше 14')
+        innError.style.display = 'block';
+        innLess.style.display = 'none';
+        innDesc.style.display = 'none'
+        isValid = false;
+    } else if (innInput.value.trim().length === 14) {
+        console.log('Равно 14')
+        innDesc.style.display = 'block';
+        innError.style.display = 'none';
+        innLess.style.display = 'none';
+        isValid = true;
+    }
+
+    if (isValid) {
+        alert('Все данные указаны правильно');
+    } else {
+        recipientBlock.scrollIntoView({ behavior: 'smooth' });
+    }
+});
+
+
 
 

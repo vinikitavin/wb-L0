@@ -328,7 +328,8 @@
                         <div class="delivery__reverse reverse">
                             <img class="reverse__img" src="./assets/images/approved-icon.svg"
                                 alt="Иконка бесплатного возврата">
-                            <p class="reverse__text1">Обратная доставка товаров на склад при отказе — <span class="reverse__text2">бесплатно</span></p>
+                            <p class="reverse__text1">Обратная доставка товаров на склад при отказе — <span
+                                    class="reverse__text2">бесплатно</span></p>
                         </div>
                     </section>
                     <section class="main__payment payment">
@@ -345,7 +346,7 @@
                             <p class="payment__warning">Спишем оплату с карты при получении</p>
                         </div>
                     </section>
-                    <section class="main__recipient recipient">
+                    <section id="recipient" class="main__recipient recipient">
                         <div class="recipient-wrapper">
                             <h2 class="recipient__head">Получатель</h4>
                                 <div class="recipient__fio">
@@ -363,11 +364,12 @@
                                 </div>
                                 <div class="recipient__data">
                                     <div class="recipient__mail-wrapper">
-                                        <input id="mail" class="recipient__mail recipient-input" placeholder="Электронная почта"
-                                            type="text">
+                                        <input id="mail" class="recipient__mail recipient-input"
+                                            placeholder="Электронная почта" type="text">
                                         <p class="recipient__mail-error recipient__error error-active">Проверьте адрес
-                                            электронной
                                             почты</p>
+                                        <p class="recipient__mail-less-error recipient__error error-active">Укажите
+                                            электронную почту</p>
                                     </div>
                                     <div class="recipient__phone-wrapper">
                                         <label class="recipient__phone-label" for="phone">Телефон</label>
@@ -375,12 +377,15 @@
                                             type="text">
                                         <p class="recipient__phone-error recipient__error error-active">Формат: +9 999
                                             999 99 99</p>
+                                        <p class="recipient__phone-less-error recipient__error error-active">Укажите
+                                            номер телефона</p>
                                     </div>
                                     <div class="recipient__inn-wrapper">
                                         <input id="inn" class="recipient__inn recipient-input" placeholder="ИНН"
                                             type="text">
                                         <p class="recipient__inn-mess">Для таможенного оформления</p>
                                         <p class="recipient__inn-error recipient__error error-active">Проверьте ИНН</p>
+                                        <p class="recipient__inn-less-error recipient__error error-active">Укажите ИНН</p>
                                     </div>
                                 </div>
                         </div>
@@ -436,7 +441,7 @@
                                 <p>Спишем оплату с карты при получении</p>
                             </div>
                             <div class="order">
-                                <button class="order__btn">Заказать</button>
+                                <button id="order" class="order__btn">Заказать</button>
                                 <div class="order-agreement__wrapper">
                                     <img class="order-agreement__icon" src="./assets/images/agreement-icon.svg"
                                         alt="Галочка согласия">
