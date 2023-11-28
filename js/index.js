@@ -109,9 +109,9 @@ function updateTotalSum() {
     function pluralizeWord(number) {
         const cases = [2, 0, 1, 1, 1, 2];
         const titles = ['товар', 'товара', 'товаров'];
-    
+
         const index = (number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5];
-    
+
         return titles[index];
     }
 
@@ -171,3 +171,21 @@ function updateButtonsState(quantityElement, minusBtn, plusBtn, productInfo) {
 function addThousandSeparators(numberString) {
     return numberString.replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
 }
+
+const hideGoodsButton = document.getElementById('hide-goods');
+const hideAbsentButton = document.getElementById('hide-absent');
+const goodsList = document.getElementById('goods__list');
+const absentList = document.getElementById('absent__list');
+
+hideGoodsButton.addEventListener('click', function () {
+    goodsList.classList.toggle('hidden');
+    hideGoodsButton.classList.toggle('rotated');
+});
+
+hideAbsentButton.addEventListener('click', function () {
+    absentList.classList.toggle('hidden');
+    hideAbsentButton.classList.toggle('rotated');
+});
+
+
+
