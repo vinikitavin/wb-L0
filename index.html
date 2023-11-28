@@ -67,13 +67,14 @@
                                     <div class="card__input-img">
                                         <div class="card__input-wrapper">
                                             <input id="card-1-checkbox" class="card__input" type="checkbox">
-                                            <label for="card-1-checkbox" class="card__label"></label>
+                                            <label for="card-1-checkbox" class="card__label card__label_mobile"></label>
                                             <img class="card__img" src="./assets/images/t-shirt-color.png">
                                         </div>
                                         <div class="card__description">
                                             <h4 class="card__description-title">Футболка UZcotton мужская</h4>
                                             <span class="card__description-color">Цвет: белый</span>
-                                            <span>Размер: 56</span>
+                                            <span class="card__description-size">Размер: 56</span>
+                                            <div class="card__description-size_mobile">56</div>
                                             <p class="card__description-koledino">Коледино WB</p>
                                             <div class="card__description-company">
                                                 <p class="card__description-company-text">OOO Вайлдберриз</p>
@@ -85,8 +86,8 @@
                                     <div class="card__btn-price">
                                         <div class="card__btn">
                                             <div class="card__quantity-btn">
-                                                <button class="card__quantity-btn_minus">-</button>
-                                                <h4 class="card__quantity">1</h4>
+                                                <button class="card__quantity-btn_minus">−</button>
+                                                <input class="card__quantity" type="text" value="1">
                                                 <button class="card__quantity-btn_plus">+</button>
                                             </div>
                                             <p class="card__quantity-text">Осталось 2 шт.</p>
@@ -109,10 +110,10 @@
                             </div>
                             <div class="goods__card card">
                                 <div class="second-card card__content">
-                                    <div class="card__input-img">
+                                    <div class="card__input-img-second card__input-img">
                                         <div class="card__input-wrapper">
                                             <input id="card-2-checkbox" class="card__input" type="checkbox">
-                                            <label for="card-2-checkbox" class="card__label"></label>
+                                            <label for="card-2-checkbox" class="card__label card__label_mobile"></label>
                                             <img class="card__img" src="./assets/images/cover.png">
                                         </div>
                                         <div class="card__description">
@@ -131,8 +132,8 @@
                                     <div class="card__btn-price">
                                         <div class="card__btn">
                                             <div class="card__quantity-btn">
-                                                <button class="card__quantity-btn_minus">-</button>
-                                                <span class="card__quantity">200</span>
+                                                <button class="card__quantity-btn_minus">−</button>
+                                                <input class="card__quantity" type="text" value="1">
                                                 <button class="card__quantity-btn_plus">+</button>
                                             </div>
                                             <p class="card__quantity-text-full"></p>
@@ -143,9 +144,9 @@
                                                     alt="Иконка корзины">
                                             </div>
                                         </div>
-                                        <div class="card__price">
+                                        <div class="card__price-second card__price">
                                             <div class="card__price-discount">
-                                                <h4 class="card__price-discount-num">2 100 047</h4>
+                                                <h4 class="card__price-discount-num">10 500</h4>
                                                 <h4 class="card__price-discount-valute">сом</h4>
                                             </div>
                                             <p class="card__price-full"><s>2 300 047 сом</s></p>
@@ -155,14 +156,15 @@
                             </div>
                             <div class="goods__card card">
                                 <div class="third-card card__content">
-                                    <div class="card__input-img">
+                                    <div class="card__input-img-third card__input-img">
                                         <div class="card__input-wrapper">
                                             <input id="card-3-checkbox" class="card__input" type="checkbox">
-                                            <label for="card-3-checkbox" class="card__label"></label>
+                                            <label for="card-3-checkbox" class="card__label card__label_mobile"></label>
                                             <img class="card__img" src="./assets/images/pencil.png">
                                         </div>
                                         <div class="card__description">
-                                            <h4>Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные,
+                                            <h4 class="card__description-title">Карандаши цветные Faber-Castell "Замок",
+                                                набор 24 цвета, заточенные,
                                                 шестигранные, Faber-Castell</h4>
                                             <p class="card__description-koledino">Коледино WB</p>
                                             <div class="card__description-company">
@@ -175,8 +177,8 @@
                                     <div class="card__btn-price">
                                         <div class="card__btn">
                                             <div class="card__quantity-btn">
-                                                <button class="card__quantity-btn_minus">-</button>
-                                                <span class="card__quantity">2</span>
+                                                <button class="card__quantity-btn_minus">−</button>
+                                                <input class="card__quantity" type="text" value="1">
                                                 <button class="card__quantity-btn_plus">+</button>
                                             </div>
                                             <p class="card__quantity-text">Осталось 2 шт.</p>
@@ -189,7 +191,7 @@
                                         </div>
                                         <div class="card__price">
                                             <div class="card__price-discount">
-                                                <h4 class="card__price-discount-num">494</h4>
+                                                <h4 class="card__price-discount-num">247</h4>
                                                 <h4 class="card__price-discount-valute">сом</h4>
                                             </div>
                                             <p class="card__price-full"><s>950 сом</s></p>
@@ -202,26 +204,26 @@
                     <section class="main__absent absent">
                         <div class="absent__manipulates">
                             <h3 class="absent__header">Отсутствуют · 3 товара</h3>
-                            <button class="goods__hide" type="button">
+                            <button class="absent__hide goods__hide" type="button">
                                 <img class="goods__check-mark" src="./assets/images/check-mark.svg" alt="галочка">
                             </button>
                         </div>
                         <ul class="absent__list">
                             <div class="absent__card card">
                                 <div class="card__content">
-                                    <div class="card__input-img">
+                                    <div class="absent__input-img card__input-img">
                                         <div class="card__input-wrapper">
                                             <img class="absent__img card__img" src="./assets/images/t-shirt-color.png">
                                         </div>
-                                        <div class="card__description">
+                                        <div class="absent__description card__description">
                                             <h4 class="card__description-title">Футболка UZcotton мужская</h4>
                                             <span class="card__description-color">Цвет: белый</span>
-                                            <span>Размер: 56</span>
+                                            <span class="card__description-size">Размер: 56</span>
                                         </div>
                                     </div>
                                     <div class="card__btn-price">
-                                        <div class="card__btn">
-                                            <div class="card__favorite-delete">
+                                        <div class="absent__btn card__btn">
+                                            <div class="absent__favorite-delete card__favorite-delete">
                                                 <img class="card__favorite" src="./assets/images/favorite.svg"
                                                     alt="Иконка избранного">
                                                 <img class="card__delete" src="./assets/images/bin.svg"
@@ -233,11 +235,11 @@
                             </div>
                             <div class="absent__card card">
                                 <div class="card__content">
-                                    <div class="card__input-img">
+                                    <div class="absent__input-img card__input-img">
                                         <div class="card__input-wrapper">
                                             <img class="absent__img card__img" src="./assets/images/cover.png">
                                         </div>
-                                        <div class="card__description">
+                                        <div class="absent__description card__description">
                                             <h4 class="absent__description-title card__description-title">Силиконовый
                                                 чехол картхолдер (отверстия)
                                                 для карт, прозрачный кейс
@@ -246,8 +248,8 @@
                                         </div>
                                     </div>
                                     <div class="card__btn-price">
-                                        <div class="card__btn">
-                                            <div class="card__favorite-delete">
+                                        <div class="absent__btn card__btn">
+                                            <div class="absent__favorite-delete card__favorite-delete">
                                                 <img class="card__favorite" src="./assets/images/favorite.svg"
                                                     alt="Иконка избранного">
                                                 <img class="card__delete" src="./assets/images/bin.svg"
@@ -259,19 +261,19 @@
                             </div>
                             <div class="absent__card card">
                                 <div class="card__content">
-                                    <div class="card__input-img">
+                                    <div class="absent__input-img card__input-img">
                                         <div class="card__input-wrapper">
                                             <img class="absent__img card__img" src="./assets/images/pencil.png">
                                         </div>
-                                        <div class="card__description">
+                                        <div class="absent__description card__description">
                                             <h4 class="absent__description-title card__description-title">Карандаши
                                                 цветные Faber-Castell "Замок",
                                                 набор 24 цвета, заточенные, шестигранные, Faber-Castell</h4>
                                         </div>
                                     </div>
                                     <div class="card__btn-price">
-                                        <div class="card__btn">
-                                            <div class="card__favorite-delete">
+                                        <div class="absent__btn card__btn">
+                                            <div class="absent__favorite-delete card__favorite-delete">
                                                 <img class="card__favorite" src="./assets/images/favorite.svg"
                                                     alt="Иконка избранного">
                                                 <img class="card__delete" src="./assets/images/bin.svg"
@@ -289,32 +291,36 @@
                             <h4 class="delivery__change">Изменить</h4>
                         </div>
                         <div class="delivery__main">
-                            <div class="delivery__keys keys">
-                                <h3 class="keys__point">Пункт выдачи</h3>
-                                <h3 class="keys__price">Стоимость доставки</h3>
-                                <h3 class="keys__date1">5—6 февраля</h3>
-                                <h3 class="keys__date2">7—8 февраля</h3>
-                            </div>
-                            <div class="delivery__values">
-                                <div class="values__point">
-                                    <h4 class="values__point-mane">Бишкек, улица Ахматбека Суюмбаева, 12/1</h4>
-                                    <div class="values__point-rating">
-                                        <img class="values__reting-img" src="./assets/images/star.svg">
-                                        <p class="values__reting-value">4.99</p>
-                                        <p class="values__working-time">Ежедневно с 10 до 21 </p>
+                            <div class="delivery__point">
+                                <h3 class="delivery__point-key">Пункт выдачи</h3>
+                                <div class="delivery__point-value-wrapper">
+                                    <h4 class="delivery__point-value">Бишкек, улица Ахматбека Суюмбаева, 12/1</h4>
+                                    <div class="delivery__point-reting">
+                                        <img class="delivery__point-reting-img" src="./assets/images/star.svg">
+                                        <p class="delivery__point-reting-value">4.99</p>
+                                        <p class="delivery__point-reting-time">Ежедневно с 10 до 21 </p>
                                     </div>
                                 </div>
-                                <h4 class="values__price">Бесплатно</h4>
-                                <div class="values__date1-imgs">
-                                    <img class="values__date-img1" src="./assets/images/t-shirt-color.png"
+                            </div>
+                            <div class="delivery__price">
+                                <h3 class="delivery__price-key">Стоимость доставки</h3>
+                                <h4 class="delivery__price-value">Бесплатно</h4>
+                            </div>
+                            <div class="delivery__date1">
+                                <h3 class="delivery__date1-key">5—6 февраля</h3>
+                                <div class="delivery__date1-value">
+                                    <img class="date1-value-img1 date-img" src="./assets/images/t-shirt-color.png"
                                         alt="Товары в доставку">
-                                    <img class="values__date-img2" src="./assets/images/cover.png"
+                                    <img class="date1-value-img2 date-img" src="./assets/images/cover.png"
                                         alt="Товары в доставку">
-                                    <img class="values__date-img3" src="./assets/images/pencil.png"
+                                    <img class="date1-value-img3 date-img" src="./assets/images/pencil.png"
                                         alt="Товары в доставку">
                                 </div>
-                                <div class="values__date2-imgs">
-                                    <img class="values__date-img2" src="./assets/images/cover.png"
+                            </div>
+                            <div class="delivery__date2">
+                                <h3 class="delivery__date2-key">7—8 февраля</h3>
+                                <div class="delivery__date2-value">
+                                    <img class="delivery__date2-img1 date-img" src="./assets/images/cover.png"
                                         alt="Товары в доставку">
                                 </div>
                             </div>
@@ -322,8 +328,7 @@
                         <div class="delivery__reverse reverse">
                             <img class="reverse__img" src="./assets/images/approved-icon.svg"
                                 alt="Иконка бесплатного возврата">
-                            <p class="reverse__text1">Обратная доставка товаров на склад при отказе —</p>
-                            <p class="reverse__text2">бесплатно</p>
+                            <p class="reverse__text1">Обратная доставка товаров на склад при отказе — <span class="reverse__text2">бесплатно</span></p>
                         </div>
                     </section>
                     <section class="main__payment payment">
@@ -352,21 +357,24 @@
                                     <div class="recipient__surname-wrapper">
                                         <input id="surname" class="recipient__surname recipient-input"
                                             placeholder="Фамилия" type="text">
-                                        <p class="recipient__surname-error recipient__error error-active">Введите фамилию</p>
+                                        <p class="recipient__surname-error recipient__error error-active">Введите
+                                            фамилию</p>
                                     </div>
                                 </div>
                                 <div class="recipient__data">
                                     <div class="recipient__mail-wrapper">
-                                        <input id="mail" class="recipient__mail recipient-input" placeholder="Почта"
+                                        <input id="mail" class="recipient__mail recipient-input" placeholder="Электронная почта"
                                             type="text">
-                                        <p class="recipient__mail-error recipient__error error-active">Проверьте адрес электронной
+                                        <p class="recipient__mail-error recipient__error error-active">Проверьте адрес
+                                            электронной
                                             почты</p>
                                     </div>
                                     <div class="recipient__phone-wrapper">
                                         <label class="recipient__phone-label" for="phone">Телефон</label>
                                         <input id="phone" class="recipient__phone recipient-input" placeholder="Телефон"
                                             type="text">
-                                        <p class="recipient__phone-error recipient__error error-active">Формат: +9 999 999 99 99</p>
+                                        <p class="recipient__phone-error recipient__error error-active">Формат: +9 999
+                                            999 99 99</p>
                                     </div>
                                     <div class="recipient__inn-wrapper">
                                         <input id="inn" class="recipient__inn recipient-input" placeholder="ИНН"
@@ -382,11 +390,11 @@
                     <div class="total__content">
                         <div class="total__main">
                             <h2 class="total__header">Итого</h2>
-                            <h2 class="total__sum">2 101 063 сом</h2>
+                            <h2 id="totalSum" class="total__sum">0 сом</h2>
                         </div>
                         <div class="total__properties">
                             <div class="total__quantity">
-                                <h4 class="total__quantity-key">203 товара</h4>
+                                <h4 class="total__quantity-key">3 товара</h4>
                                 <h4 class="total__quantity-value">2 302 048 сом</h4>
                             </div>
                             <div class="total__discount">
@@ -430,9 +438,11 @@
                             <div class="order">
                                 <button class="order__btn">Заказать</button>
                                 <div class="order-agreement__wrapper">
-                                    <img class="order-agreement__icon" src="./assets/images/agreement-icon.svg" alt="Галочка согласия">
-                                    <p>Соглашаюсь <a href="" class="order-agreement__link">с правилами пользования торговой площадкой</a> и <a
-                                        href="" class="order-agreement__link">возврата</a></p>
+                                    <img class="order-agreement__icon" src="./assets/images/agreement-icon.svg"
+                                        alt="Галочка согласия">
+                                    <p>Соглашаюсь <a href="" class="order-agreement__link">с правилами пользования
+                                            торговой площадкой</a> и <a href=""
+                                            class="order-agreement__link">возврата</a></p>
                                 </div>
                             </div>
                         </div>
@@ -443,6 +453,23 @@
         <footer class="footer">
             <p class="footer__text">© 2022 ООО «Товары и точка»</p>
         </footer>
+        <div class="mobile-nav">
+            <a href="" class="mobile-nav__link">
+                <img src="./assets/images/home-mobile-icon.svg" class="mobile-nav__icon" alt="Иконка домой">
+            </a>
+            <a href="" class="mobile-nav__link">
+                <img src="./assets/images/search-mobile-icon.svg" class="mobile-nav__icon" alt="Иконка поиска">
+            </a>
+            <a href="" class="mobile-nav__link">
+                <img src="./assets/images/basket-mobile-icon.svg" class="mobile-nav__icon" alt="Иконка корзины">
+            </a>
+            <a href="" class="mobile-nav__link">
+                <img src="./assets/images/favorite-mobile-icon.svg" class="mobile-nav__icon" alt="Иконка избранного">
+            </a>
+            <a href="" class="mobile-nav__link">
+                <img src="./assets/images/profile-mobile-icon.svg" class="mobile-nav__icon" alt="Иконка профиля">
+            </a>
+        </div>
     </div>
 </body>
 
